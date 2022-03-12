@@ -14,7 +14,7 @@ def lowestCommonAncestor(root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'Tre
     def search(r):
         if r in [None, p, q]:
             return r
-        left, right = search(r.left) , search(r.right)
+        left, right = search(r.left), search(r.right)
         if left and right:
             return r
         else:
