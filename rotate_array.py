@@ -19,15 +19,12 @@ rotate 1 steps to the right: [99,-1,-100,3]
 rotate 2 steps to the right: [3,99,-1,-100]
 """
 def rotate(self, nums: List[int], k: int) -> None:
-    """ 
-    Do not return anything, modify nums in-place instead.
-    """ 
     def reverse(i,j):
         """ 
         reverses the i to j range of nums
         """ 
         start, end = i,j 
-        while start< end:
+        while start<end:
             nums[start], nums[end] = nums[end], nums[start]
             start += 1
             end -= 1
